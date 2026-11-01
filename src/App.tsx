@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom"; // 👈 Changed to createHashRouter
 import { AppShell } from "@/components/layout/AppShell";
 import { RequireAuth } from "@/components/auth/RequireAuth";
 import { LoginPage } from "@/pages/auth/LoginPage";
@@ -10,7 +10,7 @@ import { InboxPage } from "@/pages/InboxPage";
 import { ProfilePage } from "@/pages/ProfilePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([ // 👈 Changed to createHashRouter
   { path: "/login", element: <LoginPage /> },
   { path: "/register", element: <RegisterPage /> },
   {

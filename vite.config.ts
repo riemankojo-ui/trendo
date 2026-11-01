@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 
 export default defineConfig({
+  base: '/trendo/', // 👈 Crucial for GitHub Pages
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
