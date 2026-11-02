@@ -21,6 +21,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.addEventListener("error", function (e) {
+        document.body.insertAdjacentHTML(
+          "afterbegin",
+          '<pre style="padding:16px;color:#b00;white-space:pre-wrap;font-size:12px">' +
+            (e.message || "Script failed to load") + "</pre>"
+        );
+      }, true);
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
